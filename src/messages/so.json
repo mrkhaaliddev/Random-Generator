@@ -1,14 +1,28 @@
 {
-  "HomePage": {
-    "SubTitle": "Soo ogow Dunida Aqoonta",
-    "Title": "Fur Xikmadaha iyo Sheekooyinka Aan Dhamaanayn ee Random Wisdom Generator",
-    "Description": "Waxaan kuu soo bandhigaynaa xaqiiqooyin xiiso leh, xikmadaha Soomaalida, xikmadaha caalamiga ah, iyo sheekooyin soo jiidasho leh oo ay ku jiraan kuwa ay soo saartay AI.",
-    "ImageUrl": "",
-    "ButtonOne": "Billow",
-    "ButtonTwo": "Nala Soo Xiriir",
-    "CountOne": "Xaqiiqooyin Xiiso Leh oo aan Abuuray",
-    "CountTwo": "Xikmadaha aan Abuurnay",
-    "CountThree": "Booqdayaasha Maalinlaha ah",
-    "CountFour": "Sheekooyin aan Abuurnay"
+  "Website": {
+    "HomePage": {
+      "SubTitle": "Soo ogow Dunida Aqoonta",
+      "Title": "Hel Xikmadaha iyo Sheekooyinka Aan Dhamaadka leheen ee Random Generator",
+      "Description": "Waxaan kuu soo bandhigaynaa xaqiiqooyin xiiso leh, xikmadaha Soomaalida, xikmadaha caalamiga ah, iyo sheekooyin soo jiidasho leh.",
+      "ImageUrl": "",
+      "ButtonOne": "Billow",
+      "ButtonTwo": "Nala Soo Xiriir",
+      "CountOne": "Xaqiiqooyin Xiiso Leh oo aan Abuuray",
+      "CountTwo": "Xikmadaha aan Abuurnay",
+      "CountThree": "Booqdayaasha Maalinlaha ah",
+      "CountFour": "Sheekooyin aan Abuurnay"
+    },
+    "features": {
+      "Title": "Soo hel Adduunkii Aqoonta & Xigmadda",
+      "Description": "Baro xaqiiqooyin xiiso leh, xikmad waarta, iyo sheekooyin dhiirigelin leh oo ka kala socda daafaha dunida—wax ka baro, ka fakar, oo la qabo fahamka dhaqamada kala duwan.",
+      "Item1": "Soo hel xaqiiqooyin xiiso leh oo caalami ah.",
+      "Item2": "Xikmadaha waaweyn ee Soomaaliyeed.",
+      "Item3": "Xigmad caalami ah oo dib loo habeeyey.",
+      "Item4": "Sheekooyin dhiirigelin leh oo xiiso leh."
+    },
+    "Global": {
+      "Title": "Adeegyadeena waxay gaareen adduunka.",
+      "Description": "Alaadeena hadda waxa aad ka heli kartaan adduunka oo dhan meel kasta oo aad joogto"
+    }
   }
 }

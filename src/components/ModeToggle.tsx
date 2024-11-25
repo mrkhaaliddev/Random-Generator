@@ -12,12 +12,12 @@ export function ModeToggle() {
   const { setTheme } = useTheme();
 
   React.useEffect(() => {
-    const storedTheme: any = localStorage.getItem("theme") || "light";
+    const storedTheme = localStorage.getItem("theme") || "light";
     setLocalTheme(storedTheme);
     setTheme(storedTheme);
   }, []);
 
-  const toggleTheme: any = () => {
+  const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setLocalTheme(newTheme);
     setTheme(newTheme);

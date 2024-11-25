@@ -37,9 +37,11 @@ export const Banner = ({
             {ButtonOne}
           </Button>
         </Link>
-        <Button variant="outline" size="lg">
-          {ButtonTwo}
-        </Button>
+        <a href="mailto:khaalidyare344@gmail.com">
+          <Button variant="outline" size="lg">
+            {ButtonTwo}
+          </Button>
+        </a>
       </div>
     </div>
   </div>
