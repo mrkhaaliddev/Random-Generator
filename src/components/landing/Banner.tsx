@@ -47,7 +47,7 @@ export const Banner = ({
       className="max-w-7xl mx-auto px-6 lg:px-8"
       style={{ paddingTop: "96px" }}
     >
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="fixed inset-0 flex items-center justify-center">
         <div className="blur-3xl rounded-full bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-500 w-60 h-60 opacity-40 transform rotate-45"></div>
         <div className="blur-2xl rounded-full bg-gradient-to-r from-yellow-500 via-green-400 to-blue-500 w-40 h-40 opacity-30 transform -translate-x-10 -translate-y-10"></div>
         <div className="blur-2xl rounded-full bg-gradient-to-r from-purple-600 via-red-400 to-orange-400 w-40 h-32 opacity-50 transform translate-x-10 translate-y-10"></div>

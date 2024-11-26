@@ -96,3 +96,25 @@ body {
   scrollbar-width: thin; /* Set the scrollbar width to thin */
   scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
 }
+
+/* Css of the lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
