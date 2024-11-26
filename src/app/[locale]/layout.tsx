@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -10,7 +9,7 @@ import Wrapper from "@/components/Wrapper";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/ModeToggle";
-
+import { ReactLenis } from "@/components/lenis";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -44,12 +43,14 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Wrapper>
-              <Header />
-              {children}
-              <ModeToggle />
-              <Footer />
-            </Wrapper>
+            <ReactLenis root>
+              <Wrapper>
+                <Header />
+                {children}
+                <ModeToggle />
+                <Footer />
+              </Wrapper>
+            </ReactLenis>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

@@ -15,7 +15,7 @@ export function ModeToggle() {
     const storedTheme = localStorage.getItem("theme") || "light";
     setLocalTheme(storedTheme);
     setTheme(storedTheme);
-  }, []);
+  }, [setTheme]);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";

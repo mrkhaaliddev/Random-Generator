@@ -13,9 +13,12 @@ export default function Header() {
 
   return (
     <div>
-      <header className="bg-white dark:bg-black lg:py-6">
+      <header className="lg:py-6 fixed top-0 left-0 w-full z-50">
         {/* <!-- Large Screens --> */}
-        <nav className="relative flex items-center justify-between h-16 bg-white dark:bg-black lg:rounded-xl lg:shadow-md lg:h-[86px] lg:px-8 lg:py-6 w-full">
+        <nav
+          className="relative flex items-center justify-between  max-w-7xl mx-auto h-16 backdrop-blur-lg bg-white/80 dark:bg-black/70 lg:rounded-xl lg:shadow-md lg:h-[86px] lg:px-8 lg:py-6 w-full"
+          style={{ backdropFilter: "blur(10px)" }}
+        >
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" title="Home" className="flex">
@@ -167,6 +170,9 @@ export default function Header() {
           </nav>
         </div>
       </header>
+
+      {/* Spacer to offset fixed header */}
+      <div className="h-[86px] lg:h-[96px]"></div>
     </div>
   );
 }

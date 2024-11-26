@@ -1,14 +1,10 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Illustration from "/public/assets/Illustration2.png";
 import { CircleCheckBig } from "lucide-react";
-
-const features = [
-  "Discover global fun facts.",
-  "Timeless Somali wisdom.",
-  "Global wisdom, redefined.",
-  "Inspiring, fun stories.",
-];
+import { motion } from "framer-motion";
 
 export default function Feature({
   Title,
@@ -25,10 +21,62 @@ export default function Feature({
   Item3: any;
   Item4: any;
 }) {
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariantsLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 100, filter: "blur(5px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  const hoverVariant = {
+    scale: 1.05,
+    transition: {
+      duration: 0.3,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  };
+
   return (
     <div className="md:px-10 mt-20 mb-6 sm:mb-20 mx-auto" id="feature">
-      <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 py-8 my-12">
-        <div className="h-full w-full p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-24 py-8 my-12">
+        {/* Image on the left with animation */}
+        <motion.div
+          variants={itemVariantsLeft}
+          initial="hidden"
+          animate={hasAnimated ? "visible" : "hidden"}
+          onViewportEnter={() => setHasAnimated(true)}
+          viewport={{ once: true }}
+          className="h-full w-full p-4"
+        >
           <Image
             src={Illustration}
             alt="Our illustration"
@@ -37,31 +85,45 @@ export default function Feature({
             height={414}
             width={508}
           />
-        </div>
-        <div className="flex flex-col items-start justify-center ml-auto w-full lg:w-9/12">
-          <h3 className="text-3xl lg:text-4xl font-semibold leading-relaxed text-black-600">
+        </motion.div>
+        {/* Text content on the right */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={hasAnimated ? "visible" : "hidden"}
+          onViewportEnter={() => setHasAnimated(true)}
+          viewport={{ once: true }}
+          className="flex flex-col items-start justify-center w-full lg:w-9/12"
+        >
+          <motion.h3
+            variants={itemVariants}
+            className="text-3xl lg:text-5xl font-semibold leading-relaxed text-black-600"
+          >
             {Title}
-          </h3>
-          <p className="my-4 text-gray-600 dark:text-gray-300">{Description}</p>
-          <ul className="flex flex-col gap-3">
-            <li className="flex items-center gap-3">
-              <CircleCheckBig color="#ef4444" size={18} />
-              {Item1}
-            </li>
-            <li className="flex items-center gap-3">
-              <CircleCheckBig color="#ef4444" size={18} />
-              {Item2}
-            </li>
-            <li className="flex items-center gap-3">
-              <CircleCheckBig color="#ef4444" size={18} />
-              {Item3}
-            </li>
-            <li className="flex items-center gap-3">
-              <CircleCheckBig color="#ef4444" size={18} />
-              {Item4}
-            </li>
-          </ul>
-        </div>
+          </motion.h3>
+          <motion.p
+            variants={itemVariants}
+            className="my-4 text-gray-600 dark:text-gray-300"
+          >
+            {Description}
+          </motion.p>
+          <motion.ul
+            variants={containerVariants}
+            className="flex flex-col gap-3"
+          >
+            {[Item1, Item2, Item3, Item4].map((item, index) => (
+              <motion.li
+                key={index}
+                variants={itemVariants}
+                whileHover={hoverVariant}
+                className="flex items-center gap-3 cursor-pointer text-gray-900 dark:text-gray-50"
+              >
+                <CircleCheckBig color="#ef4444" size={18} />
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
       </div>
     </div>
   );
