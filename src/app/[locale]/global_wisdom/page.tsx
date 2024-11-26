@@ -1,5 +1,7 @@
-import React from "react";
-
-export default function globalWisdom() {
-  return <div>hello global wisdom</div>;
+export default function globalWisdoms() {
+  return (
+    <div className="mt-10">
+      <h1>Hello Global Wisdom</h1>
+    </div>
+  );
 }

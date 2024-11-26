@@ -70,3 +70,29 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* For WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the vertical scrollbar */
+  height: 12px; /* Set the height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the scrollbar thumb (the draggable part) color */
+  border-radius: 10px; /* Optional: round corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Change thumb color when hovered */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set the scrollbar track (the background) color */
+  border-radius: 10px; /* Optional: round corners */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Set the scrollbar width to thin */
+  scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
+}

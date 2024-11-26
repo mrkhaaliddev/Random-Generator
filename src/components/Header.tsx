@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { Link } from "@/i18n/routing";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,10 +13,10 @@ export default function Header() {
 
   return (
     <div>
-      <header className="lg:py-6 fixed top-0 left-0 w-full z-50">
+      <header className="lg:py-4 fixed top-0 left-0 w-full z-50">
         {/* <!-- Large Screens --> */}
         <nav
-          className="relative flex items-center justify-between  max-w-7xl mx-auto h-16 backdrop-blur-lg bg-white/80 dark:bg-black/70 lg:rounded-xl lg:shadow-md lg:h-[86px] lg:px-8 lg:py-6 w-full"
+          className="relative flex items-center justify-between max-w-7xl mx-auto h-16 backdrop-blur-lg bg-white/80 dark:bg-black/70 lg:rounded-xl lg:shadow-md lg:h-[86px] px-4 md:px-8 lg:py-6 w-full"
           style={{ backdropFilter: "blur(10px)" }}
         >
           {/* Logo */}
@@ -78,9 +78,9 @@ export default function Header() {
           <div className="hidden lg:flex lg:items-center lg:space-x-10">
             <Link
               href="/fun_facts"
-              className={`text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-blue-400 focus:text-primary dark:focus:text-blue-400 ${
+              className={`text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-primary focus:text-primary dark:focus:text-primary hover:border-b hover:border-primary ${
                 currentPath === "fun_facts"
-                  ? "text-primary dark:text-blue-400"
+                  ? "text-primary dark:text-primary border-b border-primary"
                   : "text-black dark:text-gray-300"
               }`}
             >
@@ -88,9 +88,9 @@ export default function Header() {
             </Link>
             <Link
               href="/somali_wisdom"
-              className={`text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-blue-400 focus:text-primary dark:focus:text-blue-400 ${
+              className={`text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-primary focus:text-primary dark:focus:text-primary hover:border-b hover:border-primary ${
                 currentPath === "somali_wisdom"
-                  ? "text-primary dark:text-blue-400"
+                  ? "text-primary dark:text-primary border-b border-primary"
                   : "text-black dark:text-gray-300"
               }`}
             >
@@ -98,9 +98,9 @@ export default function Header() {
             </Link>
             <Link
               href="/global_wisdom"
-              className={`text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-blue-400 focus:text-primary dark:focus:text-blue-400 ${
+              className={`text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-primary focus:text-primary dark:focus:text-primary hover:border-b hover:border-primary ${
                 currentPath === "global_wisdom"
-                  ? "text-primary dark:text-blue-400"
+                  ? "text-primary dark:text-primary border-b border-primary"
                   : "text-black dark:text-gray-300"
               }`}
             >
@@ -108,9 +108,9 @@ export default function Header() {
             </Link>
             <Link
               href="/stories"
-              className={`text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-blue-400 focus:text-primary dark:focus:text-blue-400 ${
+              className={`text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-primary focus:text-primary dark:focus:text-primary hover:border-b hover:border-primary ${
                 currentPath === "stories"
-                  ? "text-primary dark:text-blue-400"
+                  ? "text-primary dark:text-primary border-b border-primary"
                   : "text-black dark:text-gray-300"
               }`}
             >
@@ -126,12 +126,13 @@ export default function Header() {
             isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           } overflow-hidden bg-white dark:bg-black`}
         >
-          <nav className="flex flex-col py-4 px-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
+          <nav className="flex flex-col items-center py-4 px-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
             <Link
               href="/fun_facts"
-              className={`py-2 text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-blue-400 ${
+              onClick={() => setIsMenuOpen(false)}
+              className={`inline-block py-2 text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-primary hover:border-b hover:border-primary ${
                 currentPath === "fun_facts"
-                  ? "text-primary dark:text-blue-400"
+                  ? "text-primary dark:text-primary border-b border-primary"
                   : "text-black dark:text-gray-300"
               }`}
             >
@@ -139,9 +140,10 @@ export default function Header() {
             </Link>
             <Link
               href="/somali_wisdom"
-              className={`py-2 text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-blue-400 ${
+              onClick={() => setIsMenuOpen(false)}
+              className={`inline-block py-2 text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-primary hover:border-b hover:border-primary ${
                 currentPath === "somali_wisdom"
-                  ? "text-primary dark:text-blue-400"
+                  ? "text-primary dark:text-primary border-b border-primary"
                   : "text-black dark:text-gray-300"
               }`}
             >
@@ -149,9 +151,10 @@ export default function Header() {
             </Link>
             <Link
               href="/global_wisdom"
-              className={`py-2 text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-blue-400 ${
+              onClick={() => setIsMenuOpen(false)}
+              className={`inline-block py-2 text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-primary hover:border-b hover:border-primary ${
                 currentPath === "global_wisdom"
-                  ? "text-primary dark:text-blue-400"
+                  ? "text-primary dark:text-primary border-b border-primary"
                   : "text-black dark:text-gray-300"
               }`}
             >
@@ -159,9 +162,10 @@ export default function Header() {
             </Link>
             <Link
               href="/stories"
-              className={`py-2 text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-blue-400 ${
+              onClick={() => setIsMenuOpen(false)}
+              className={`inline-block py-2 text-base font-medium transition-all duration-200 hover:text-primary dark:hover:text-primary hover:border-b hover:border-primary ${
                 currentPath === "stories"
-                  ? "text-primary dark:text-blue-400"
+                  ? "text-primary dark:text-primary border-b border-primary"
                   : "text-black dark:text-gray-300"
               }`}
             >

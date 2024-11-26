@@ -1,9 +1,7 @@
-import React from 'react'
-
-export default function somaliWisdom() {
+export default function somaliWisdoms() {
   return (
-    <div>
-      hello somali wisdom
+    <div className="mt-10">
+      <h1>Hello Somali Wisdom</h1>
     </div>
-  )
+  );
 }
