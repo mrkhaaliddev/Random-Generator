@@ -23,6 +23,18 @@
     "Global": {
       "Title": "Our influence extends worldwide.",
       "Description": "Our product is now accessible worldwide, making it easier than ever to stay connected and empowered, no matter where you are."
+    },
+    "Faq": {
+      "Q1": "What is the purpose of this website?",
+      "A1": "This website generates random fun facts, Somali proverbs, global wisdom, and AI-powered stories to educate, inspire, and entertain users.",
+      "Q2": "Is this website free to use?",
+      "A2": "Yes, the website is completely free and created by Somali engineers for a global audience.",
+      "Q3": "Who created this website?",
+      "A3": "The website was developed by Mr. Khaalid, a Somali developer dedicated to sharing knowledge and cultural insights worldwide.",
+      "Q4": "What kind of content can I find here?",
+      "A4": "You can explore fun facts, timeless Somali proverbs, global wisdom, and engaging AI-generated stories designed to inspire and entertain.",
+      "Q5": "Can I suggest new features or content?",
+      "A5": "Yes, we welcome user feedback! Please reach out through the 'Contact Us' page to share your ideas or suggestions."
     }
   }
 }

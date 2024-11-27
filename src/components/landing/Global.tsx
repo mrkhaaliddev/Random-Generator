@@ -56,7 +56,7 @@ export default function Global({
     >
       <motion.h1
         variants={itemVariants}
-        className="text-3xl lg:text-4xl font-semibold text-center leading-relaxed w-9/12 sm:w-6/12 lg:w-4/12 mx-auto"
+        className="text-4xl md:text-4xl lg:text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white text-center leading-relaxed w-9/12 sm:w-6/12 lg:w-6/12 mx-auto"
       >
         {Title}
       </motion.h1>

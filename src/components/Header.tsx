@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="lg:py-4 fixed top-0 left-0 w-full z-50">
+      <header className="sm:px-6 lg:px-8 lg:py-4 fixed top-0 left-0 w-full z-50">
         {/* <!-- Large Screens --> */}
         <nav
           className="relative flex items-center justify-between max-w-7xl mx-auto h-16 backdrop-blur-lg bg-white/80 dark:bg-black/70 lg:rounded-xl lg:shadow-md lg:h-[86px] px-4 md:px-8 lg:py-6 w-full"

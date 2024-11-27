@@ -47,7 +47,7 @@ export const Banner = ({
       className="max-w-7xl mx-auto px-6 lg:px-8"
       style={{ paddingTop: "96px" }}
     >
-      <div className="fixed inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-center justify-center">
         <div className="blur-3xl rounded-full bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-500 w-60 h-60 opacity-40 transform rotate-45"></div>
         <div className="blur-2xl rounded-full bg-gradient-to-r from-yellow-500 via-green-400 to-blue-500 w-40 h-40 opacity-30 transform -translate-x-10 -translate-y-10"></div>
         <div className="blur-2xl rounded-full bg-gradient-to-r from-purple-600 via-red-400 to-orange-400 w-40 h-32 opacity-50 transform translate-x-10 translate-y-10"></div>
@@ -74,7 +74,7 @@ export const Banner = ({
         </motion.div>
         <motion.h1
           variants={itemVariants}
-          className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl text-gray-900 dark:text-white"
+          className="mt-6 text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
         >
           {Title}
         </motion.h1>

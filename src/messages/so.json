@@ -23,6 +23,18 @@
     "Global": {
       "Title": "Adeegyadeena waxay gaareen adduunka.",
       "Description": "Alaadeena hadda waxa aad ka heli kartaan adduunka oo dhan meel kasta oo aad joogto"
+    },
+    "Faq": {
+      "Q1": "Maxay ujeeddada boggan tahay?",
+      "A1": "Boggan wuxuu abuuraa xaqiiqooyin xiiso leh, maahmaahyada Soomaalida, xikmad caalami ah, iyo sheekooyin ay AI soo saarto si loo baro, loo dhiirrigeliyo, loona madadaaliyo isticmaalayaasha.",
+      "Q2": "Ma lacag la'aan baa boggan?",
+      "A2": "Haa, boggan waa gebi ahaanba lacag la'aan oo waxaa sameeyay injineero Soomaali ah si loo gaarsiiyo dadka caalamka.",
+      "Q3": "Yaa sameeyay boggan?",
+      "A3": "Boggan waxaa sameeyay Mr. Khaalid, oo ah horumariye Soomaali ah oo u heellan faafinta aqoonta iyo dhaqanka.",
+      "Q4": "Maxaan ka heli karaa boggan?",
+      "A4": "Waxaad ka heli kartaa xaqiiqooyin xiiso leh, maahmaahyo Soomaali ah, xikmad caalami ah, iyo sheekooyin xiiso leh oo ay AI soo saartay.",
+      "Q5": "Ma soo jeedin karaa fikrado cusub?",
+      "A5": "Haa, soo jeedintaada waa muhiim! Fadlan nagala soo xiriir bogga 'Nala Soo Xiriir' si aad fikradaada noo soo gaarsiiso."
     }
   }
 }

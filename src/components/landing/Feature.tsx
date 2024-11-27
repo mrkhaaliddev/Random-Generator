@@ -66,7 +66,7 @@ export default function Feature({
   };
 
   return (
-    <div className="md:px-10 mt-20 mb-6 sm:mb-20 mx-auto" id="feature">
+    <div className="md:px-10 mt-24 mb-6 sm:mb-20 mx-auto" id="feature">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-24 py-8 my-12">
         {/* Image on the left with animation */}
         <motion.div
@@ -97,7 +97,7 @@ export default function Feature({
         >
           <motion.h3
             variants={itemVariants}
-            className="text-3xl lg:text-5xl font-semibold leading-relaxed text-black-600"
+            className="text-4xl lg:text-5xl font-semibold leading-relaxed bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
           >
             {Title}
           </motion.h3>
