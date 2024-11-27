@@ -76,7 +76,7 @@ export function FAQ({
         viewport={{ once: true }}
         className="pt-4 text-slate-600 dark:text-slate-300"
       >
-        Can't find the answer you're looking for?{" "}
+        Can&apos;t find the answer you&apos;re looking for?
         <a href="mailto: khaalidyare344@gmail.com" className="text-primary">
           Reach out to us
         </a>{" "}
